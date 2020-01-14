@@ -51,8 +51,7 @@ public class EmployeeController {
 
     @PostMapping("/addStatus")
     public Long addStatus(AddStatusToCandidateRequest addStatusToCandidateRequest) {
-        return employeeService.addStatusToCandidate(addStatusToCandidateRequest,
-                addStatusToCandidateRequest.getApplicationId());
+        return employeeService.addStatusToCandidate(addStatusToCandidateRequest);
     }
 
 }

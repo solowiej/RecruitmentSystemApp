@@ -7,6 +7,7 @@ import com.recruitment.recruitmentsystem.model.Candidate;
 import com.recruitment.recruitmentsystem.model.Employee;
 import com.recruitment.recruitmentsystem.model.dto.AddStatusToCandidateRequest;
 import com.recruitment.recruitmentsystem.model.dto.EmployeeDto;
+import com.recruitment.recruitmentsystem.repository.ApplicationRepository;
 import com.recruitment.recruitmentsystem.repository.CandidateRepository;
 import com.recruitment.recruitmentsystem.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +23,15 @@ public class EmployeeService {
     private EmployeeRepository employeeRepository;
     private EmployeeMapper employeMapper;
     private CandidateRepository candidateRepository;
-
+    private ApplicationRepository applicationRepository;
 
     @Autowired
-    public EmployeeService(EmployeeRepository employeeRepository, EmployeeMapper employeMapper) {
+    public EmployeeService(EmployeeRepository employeeRepository, EmployeeMapper employeMapper, CandidateRepository candidateRepository,
+                           ApplicationRepository applicationRepository) {
         this.employeeRepository = employeeRepository;
         this.employeMapper = employeMapper;
+        this.candidateRepository = candidateRepository;
+        this.applicationRepository = applicationRepository;
     }
 
     public List<Employee> getAll() {
@@ -79,21 +83,24 @@ public class EmployeeService {
         throw new EntityNotFoundException("employee, id:" + id);
     }
 
-    public Long addStatusToCandidate(AddStatusToCandidateRequest addStatusToCandidateRequest, Long applicationId) {
+    public Long addStatusToCandidate(AddStatusToCandidateRequest addStatusToCandidateRequest) {
         Optional<Candidate> optionalCandidate = candidateRepository.findById(addStatusToCandidateRequest.getCandidateId());
         Optional<Employee> optionalEmployee = employeeRepository.findById(addStatusToCandidateRequest.getEmployeeId());
+        Optional<Application> optionalApplication = applicationRepository.findById(addStatusToCandidateRequest.getApplicationId());
 
-        if (optionalCandidate.isPresent() && optionalEmployee.isPresent()) {
+        if (optionalCandidate.isPresent() && optionalEmployee.isPresent() && optionalApplication.isPresent()) {
             Candidate candidate = optionalCandidate.get();
+            Employee employee = optionalEmployee.get();
 
             for (Application application : candidate.getApplications()) {
-                if (application.getId().equals(applicationId)) {
+                if (application.getId().equals(addStatusToCandidateRequest.getApplicationId())) {
                     application.setStatus(addStatusToCandidateRequest.getStatus());
+                    application.setCandidate(candidate);
+                    applicationRepository.save(application);
+                    candidateRepository.save(candidate);
                 }
             }
-
-            return candidateRepository.save(candidate).getId();
-
+            return employeeRepository.save(employee).getId();
         }
         throw new EntityNotFoundException("employee, id:" + addStatusToCandidateRequest.getEmployeeId());
     }
