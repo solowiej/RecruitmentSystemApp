@@ -1,7 +1,7 @@
 package com.recruitment.recruitmentsystem.mapper;
 
 import com.recruitment.recruitmentsystem.model.Application;
-import com.recruitment.recruitmentsystem.model.dto.AddApplicationToCandidateRequest;
+import com.recruitment.recruitmentsystem.model.requests.AddApplicationToCandidateRequest;
 import com.recruitment.recruitmentsystem.model.dto.ApplicationDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

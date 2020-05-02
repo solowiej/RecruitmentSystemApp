@@ -5,7 +5,7 @@ import com.recruitment.recruitmentsystem.mapper.EmployeeMapper;
 import com.recruitment.recruitmentsystem.model.Application;
 import com.recruitment.recruitmentsystem.model.Candidate;
 import com.recruitment.recruitmentsystem.model.Employee;
-import com.recruitment.recruitmentsystem.model.dto.AddStatusToCandidateRequest;
+import com.recruitment.recruitmentsystem.model.requests.AddStatusToCandidateRequest;
 import com.recruitment.recruitmentsystem.model.dto.EmployeeDto;
 import com.recruitment.recruitmentsystem.repository.ApplicationRepository;
 import com.recruitment.recruitmentsystem.repository.CandidateRepository;

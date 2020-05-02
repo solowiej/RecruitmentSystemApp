@@ -2,9 +2,9 @@ package com.recruitment.recruitmentsystem.controller;
 
 
 import com.recruitment.recruitmentsystem.model.Candidate;
-import com.recruitment.recruitmentsystem.model.dto.AddApplicationToCandidateRequest;
-import com.recruitment.recruitmentsystem.model.dto.AddDocumentToCandidateRequest;
-import com.recruitment.recruitmentsystem.model.dto.AddMoneyToCandidateRequest;
+import com.recruitment.recruitmentsystem.model.requests.AddApplicationToCandidateRequest;
+import com.recruitment.recruitmentsystem.model.requests.AddDocumentToCandidateRequest;
+import com.recruitment.recruitmentsystem.model.requests.AddMoneyToCandidateRequest;
 import com.recruitment.recruitmentsystem.model.dto.CandidateDto;
 import com.recruitment.recruitmentsystem.service.CandidateService;
 import lombok.AllArgsConstructor;

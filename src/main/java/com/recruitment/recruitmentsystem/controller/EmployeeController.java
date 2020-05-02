@@ -2,7 +2,7 @@ package com.recruitment.recruitmentsystem.controller;
 
 
 import com.recruitment.recruitmentsystem.model.Employee;
-import com.recruitment.recruitmentsystem.model.dto.AddStatusToCandidateRequest;
+import com.recruitment.recruitmentsystem.model.requests.AddStatusToCandidateRequest;
 import com.recruitment.recruitmentsystem.model.dto.EmployeeDto;
 import com.recruitment.recruitmentsystem.service.EmployeeService;
 import lombok.AllArgsConstructor;

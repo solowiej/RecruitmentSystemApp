@@ -2,7 +2,7 @@ package com.recruitment.recruitmentsystem.mapper;
 
 
 import com.recruitment.recruitmentsystem.model.Document;
-import com.recruitment.recruitmentsystem.model.dto.AddDocumentToCandidateRequest;
+import com.recruitment.recruitmentsystem.model.requests.AddDocumentToCandidateRequest;
 import com.recruitment.recruitmentsystem.model.dto.DocumentDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

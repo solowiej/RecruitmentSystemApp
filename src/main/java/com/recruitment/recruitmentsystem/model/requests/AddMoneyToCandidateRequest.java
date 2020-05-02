@@ -1,4 +1,4 @@
-package com.recruitment.recruitmentsystem.model.dto;
+package com.recruitment.recruitmentsystem.model.requests;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,6 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AddMoneyToCandidateRequest {
     private Long candidateId;
-
     private Long balance;
 }

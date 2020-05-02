@@ -1,4 +1,4 @@
-package com.recruitment.recruitmentsystem.model.dto;
+package com.recruitment.recruitmentsystem.model.requests;
 
 
 import com.recruitment.recruitmentsystem.model.Status;

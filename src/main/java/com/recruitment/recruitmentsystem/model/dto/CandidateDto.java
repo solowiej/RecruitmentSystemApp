@@ -21,3 +21,5 @@ public class CandidateDto {
     @DateTimeFormat(pattern = "yyyy/MM/dd")
     private LocalDate dateOfBirth;
 }
+
+
