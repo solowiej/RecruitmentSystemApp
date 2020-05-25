@@ -9,15 +9,15 @@ The server will start on port 8080.
 
 6. Swagger link:  http://localhost:8080/documentation/swagger-ui.html#/
 
-Projekt zawiera: 
-Klasy główne: Employee, Application, Candidate, Application - funkcje CRUD jak i podstawowe funkcje użytkowe:
-- listowanie użytkowników,
-- listownie pracowników, 
-- funkcja dodania dokumnetow przez kandydata do swojego konta, 
-- funkcja dodania zasilenia salda kandydata, 
-- funkcja dodanie aplikacji do swojego konta (tylko gdy został złożony komplet dokumentów 
-oraz saldo konta posiada wystarczająca ilość środków),
-- funkcja zmiany statusu złożonej aplikacji przez pracownika.
+Project included:
+Main classes like Employee, Application, Candidate - CRUD and also additoionals usefull functions:
+
+- user listings
+- employee listing
+- posibility of adding documents by the candidate to his account
+ - posibility of adding savings to the candidate's balance,
+- the function of adding an application to your account (only if a set of documents has been submitted and the account balance has sufficient funds),
+- function of changing the status of the application submitted by the employee.
 
 Kandydat chcąć brać udział w rekrutacji zakłada konto, aby spełnić wszyskite wymagania, 
 musi dołączyć do swojego konta komplet dokumentów, jak i zasilić swoje konto (opłata za aplikacje, 
