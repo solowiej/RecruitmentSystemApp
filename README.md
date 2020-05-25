@@ -19,10 +19,6 @@ Main classes like Employee, Application, Candidate - CRUD and also additoionals 
 - the function of adding an application to your account (only if a set of documents has been submitted and the account balance has sufficient funds),
 - function of changing the status of the application submitted by the employee.
 
-Kandydat chcąć brać udział w rekrutacji zakłada konto, aby spełnić wszyskite wymagania, 
-musi dołączyć do swojego konta komplet dokumentów, jak i zasilić swoje konto (opłata za aplikacje, 
-czy za studia niestacjonarne). Aplikując ma do wyboru kierunki studiów na które może się zapisać.
-Aplikacje złożyć może wylko w chwili spełnienia wszystkich warunków : dostarczenie wszystkich wymaganych 
-dokumentów oraz wystarczająca ilość środków na koncie. Po dostarczeniu aplikacji, w przypadku pozytywnego 
-rozpatrzenia, pracownik ma możliwość zmiany statusu aplikacji.
+Candidates who want to participate in recruitment must set up a personal account and meet all procedural requirements such as assurance necessary documents or making payments (application fee, extramural studies, etc.). When applying for admission, a candidate may choose the fields of study to which he can enroll. Applications can be submitted only when all conditions are met. After delivery of the application, in the case of positive consideration, the employee can change the application status.
+
 
