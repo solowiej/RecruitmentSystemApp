@@ -1,4 +1,4 @@
-# RecruitmentSystemApp
+# RecruitmentSystem
 
 1. open cmd
 2. cd c:/project (go to your project root folder) 
